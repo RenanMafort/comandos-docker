@@ -1,132 +1,135 @@
-## - exibe quais containers estão sendo executados no momento, utilizando a flag -a, temos também todos os containers já executados na máquina;
-docker ps ou docker container ls;
+```yaml
+# - EXIBE QUAIS CONTAINERS ESTÃO SENDO EXECUTADOS NO MOMENTO, UTILIZANDO A FLAG -A, TEMOS TAMBÉM TODOS OS CONTAINERS JÁ EXECUTADOS NA MÁQUINA;
+docker ps OU DOCKER CONTAINER LS;
 
-## - rodar um container e deixá-lo executando no terminal;
+# - RODAR UM CONTAINER E DEIXÁ-LO EXECUTANDO NO TERMINAL;
 docker run -it mysql
 
-## - para o container
-docker stop <nome_container> || <id_container>
+# - PARA O CONTAINER
+docker stop <NOME_CONTAINER> || <ID_CONTAINER>
 
-## - executa o container e a flag -d serve para executar em background
-docker run -d <nome_coitaner>    
+# - EXECUTA O CONTAINER E A FLAG -D SERVE PARA EXECUTAR EM BACKGROUND
+docker run -d <NOME_COITANER>    
 
-## - flag -p indica que é pra expor a porta 3000 da minha máquina na porta 80 do container
-docker -p 3000:80
+# - FLAG -P INDICA QUE É PRA EXPOR A PORTA 3000 DA MINHA MÁQUINA NA PORTA 80 DO CONTAINER
+docker -P 3000:80
 
-## - reinicia o container
-docker start <id_container> ou <nome_container>
+# - REINICIA O CONTAINER
+docker start <ID_CONTAINER> OU <NOME_CONTAINER>
 
-## - executa um container e seta o seu nome
-docker run --name <nome_container> <imagem>
+# - EXECUTA UM CONTAINER E SETA O SEU NOME
+docker run --name <NOME_CONTAINER> <IMAGEM>
 
-## - remove o container e utilizando a flag -f para forçar caso o conteiner estiver sendo usado
-docker -rm <id_container> || <nome_container>
+# - REMOVE O CONTAINER E UTILIZANDO A FLAG -F PARA FORÇAR CASO O CONTEINER ESTIVER SENDO USADO
+docker -RM <ID_CONTAINER> || <NOME_CONTAINER>
 
-## - faz o download da imagem
-docker pull <name_image>
+# - FAZ O DOWNLOAD DA IMAGEM
+docker pull <NAME_IMAGE>
 
-## - qualquer comando utilizando o --help para ter mais informações
-docker run --help
+# - QUALQUER COMANDO UTILIZANDO O --HELP PARA TER MAIS INFORMAÇÕES
+docker run --HELP
 
-## - muda o nome da imagem e a tag
-docker tag <id_image> <nome>:<tag>
+# - MUDA O NOME DA IMAGEM E A TAG
+docker tag <ID_IMAGE> <NOME>:<TAG>
 
-## - inicia o container no modo iterativo
-docker start -i
+# - INICIA O CONTAINER NO MODO INTERATIVO
+docker start -I
 
-## - emove uma imagem
-docker rmi
+# - REMOVE UMA IMAGEM
+docker RMI
 
-## - az a limpa de imagens,containers ou caches sem usos
-docker system prune
+# - FAZ A LIMPA DE IMAGENS, CONTAINERS OU CACHES SEM USOS
+docker SYSTEM PRUNE
 
-## - opia do container para a imagem ou path especifico
-docker cp
+# - COPIA DO CONTAINER PARA A IMAGEM OU PATH ESPECIFICO
+docker CP
 
-## - verifica a execucação do container
-docker top <container>
+# - VERIFICA A EXECUCAÇÃO DO CONTAINER
+docker TOP <CONTAINER>
 
-#mostra todas as informaçoes do container
-docker inspect <container>
+#MOSTRA TODAS AS INFORMACOES DO CONTAINER
+docker INSPECT <CONTAINER>
 
-## - docker login
+# - DOCKER LOGIN
 
-## - docker logout
+# - DOCKER LOGOUT
 
-## - nvia uma imagem pro dockerhub
-docker push
+# - ENVIA UMA IMAGEM PRO DOCKERHUB
+docker PUSH
 
 # ==============VOLUMES=============
-## - Cria o container e o diretorio onde ficara os volumes /data - esse é do tipo anonimous
-Ex: docker run -d -p 80:80 --name phpmessages_container  -v /data phpmessages
+# - CRIA O CONTAINER E O DIRETORIO ONDE FICARA OS VOLUMES /DATA - ESSE É DO TIPO ANONIMOUS
+EX: DOCKER RUN -D -P 80:80 --NAME PHPMESSAGES_CONTAINER  -V /DATA PHPMESSAGES
 
-## - criar volume Bind mount
-docker run -v nomedovolume:/data
-Ex: docker run -d -p 80:80 --name phpmessages_container  -v nossoDiretorio:<WORKDIR> phpmessages
+# - CRIAR VOLUME BIND MOUNT
+DOCKER RUN -V NOMEDOVOLUME:/DATA
+EX: DOCKER RUN -D -P 80:80 --NAME PHPMESSAGES_CONTAINER  -V NOSSODIRETORIO:<WORKDIR> PHPMESSAGES
 
-## - Criando volume manualmente
-docker volume create <volumeteste>
+# - CRIANDO VOLUME MANUALMENTE
+DOCKER VOLUME CREATE <VOLUMETESTE>
 
-## - Listando todos os volumes
-docker volume ls
+# - LISTANDO TODOS OS VOLUMES
+DOCKER VOLUME LS
 
-## - inspeciona o volume
-docker volume inspect <name_volume>
+# - INSPECIONA O VOLUME
+DOCKER VOLUME INSPECT <NAME_VOLUME>
 
-## - emove o volume
-docker volume rm <nome>
+# - REMOVE O VOLUME
+DOCKER VOLUME RM <NOME>
 
-## - remove todos os volumes que não estão sendo utilizado
-docker volume prune
+# - REMOVE TODOS OS VOLUMES QUE NÃO ESTÃO SENDO UTILIZADOS
+DOCKER VOLUME PRUNE
 
-## - volume apenas de leitura :ro significa read only
-docker run -v volume:/data:ro
+# - VOLUME APENAS DE LEITURA :RO SIGNIFICA READ ONLY
+DOCKER RUN -V VOLUME:/DATA:RO
 
 # ==============NETWORKS=============
-## - LISTA TODAS AS REDES
-docker network ls
+# - LISTA TODAS AS REDES
+DOCKER NETWORK LS
 
-## - CRIANDO UMA REDE
-docker network create <nome_da_rede>
+# - CRIANDO UMA REDE
+DOCKER NETWORK CREATE <NOME_DA_REDE>
 
-## - cria uma rede com um driver especifico
-docker network create -d macvlan meumacvlan
+# - CRIA UMA REDE COM UM DRIVER ESPECIFICO
+DOCKER NETWORK CREATE -D MACVLAN MEUMACVLAN
 
-## - REMOVE TODAS AS REDES
-docker network prune
+# - REMOVE TODAS AS REDES
+DOCKER NETWORK PRUNE
 
-## - CONECTAR CONTAINER
-docker network connect <rede> <container>
+# - CONECTAR CONTAINER
+DOCKER NETWORK CONNECT <REDE> <CONTAINER>
 
-## - DESCONECTAR CONTAINER
-docker network connect <rede> <container>
+# - DESCONECTAR CONTAINER
+DOCKER NETWORK CONNECT <REDE> <CONTAINER>
 
-## - INSPECIONAR CONTAINER
-docker network inspect <nome>
+# - INSPECIONAR CONTAINER
+DOCKER NETWORK INSPECT <NOME>
 
 # =======================DOCKER-COMPOSE==========================
-## - docker-compose up
+# - DOCKER-COMPOSE UP
 
-## - COMPOSE EM BACKGROUND
-docker-compose up -d
+# - COMPOSE EM BACKGROUND
+DOCKER-COMPOSE UP -D
 
-## - PARANDO O COMPOSE
-docker-compose down
+# - PARANDO O COMPOSE
+DOCKER-COMPOSE DOWN
 
-## - VERIFICA O QUE TEM NO COMPOSE
-docker-compose ps
+# - VERIFICA O QUE TEM NO COMPOSE
+DOCKER-COMPOSE PS
 
 # =================KUBERNETES=================
-minikube start --driver=<DRIVER>
-minikube stop
-minikube dashboard
-minikube dashboar --url
+MINIKUBE START --DRIVER=<DRIVER>
+MINIKUBE STOP
+MINIKUBE DASHBOARD
+MINIKUBE DASHBOAR --URL
 
-## - criando um deployment
-kubectl create  deployment flask-deployment --image=renansereia/flas-kubernetes-projeto
-kubectl get deployments
-kubectl describe deployments
-kubectl get pods
-kubectl describe pods
-kubectl config view
-kubectl expose deployment <NOME> --type=<TIPO> --port=<PORTA>
+# - CRIANDO UM DEPLOYMENT
+KUBECTL CREATE  DEPLOYMENT FLASK-DEPLOYMENT --IMAGE=RENANSEREIA/FLAS-KUBERNETES-PROJETO
+KUBECTL GET DEPLOYMENTS
+KUBECTL DESCRIBE DEPLOYMENTS
+KUBECTL GET PODS
+KUBECTL DESCRIBE PODS
+KUBECTL CONFIG VIEW
+KUBECTL EXPOSE DEPLOYMENT <NOME> --TYPE=<TIPO> --PORT=<PORTA>
+
+```
