@@ -133,3 +133,32 @@ KUBECTL CONFIG VIEW
 KUBECTL EXPOSE DEPLOYMENT <NOME> --TYPE=<TIPO> --PORT=<PORTA>
 
 ```
+# Exemplos de Dockerfile
+#### Exemplo utilizando o tomcat, java 8 e a pasta dist do angular
+```yaml
+FROM openjdk:8-jre-alpine
+
+# Criação do diretório para o Tomcat
+RUN mkdir /opt/tomcat/
+
+WORKDIR /opt/tomcat/
+
+# Copie o arquivo apache-tomcat-8.5.98.tar.gz baixado localmente para o diretório atual no contêiner
+COPY apache-tomcat-8.5.98.tar.gz .
+
+# Descompacte o arquivo e exclui o arquivo compactado para economizar memoria
+RUN tar xvfz apache-tomcat-8.5.98.tar.gz --strip-components=1 \
+    && rm apache-tomcat-8.5.98.tar.gz
+
+# Copie o arquivo .WAR ou a pasta /out/artifacts do intellij para o diretório  webapps do Tomcat onde é startado os aplicativos
+# Apos o webapps/ é colocado o path configurado no web.xml da aplicação, assim conseguimos chamar localhost:8080/path da aplicação
+COPY /out/artifacts/pccf_agencia_web /opt/tomcat/webapps/pccf_agencia_web/
+
+COPY /dist /opt/tomcat/webapps/static/pccf_agencia_web/
+
+# Exposição da porta 8080
+EXPOSE 8080
+
+# Comando para iniciar o Tomcat
+CMD ["/opt/tomcat/bin/catalina.sh", "run"]
+```
