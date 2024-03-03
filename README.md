@@ -1,6 +1,8 @@
 ```yaml
  
-
+ ▀█▀ █▀▄▀█ █▀▀█ █▀▀▀ █▀▀ █▀▀▄ █▀▀   █▀▀   █▀▀█ █▀▀█ █▀▀▄ ▀▀█▀▀ █▀▀█ ░▀░ █▀▀▄ █▀▀ █▀▀█ █▀▀
+ ░█░ █░▀░█ █▄▄█ █░▀█ █▀▀ █░░█ ▀▀█   █▀▀   █░░░ █░░█ █░░█ ░░█░░ █▄▄█ ▀█▀ █░░█ █▀▀ █▄▄▀ ▀▀█
+ ▄█▄ ▀░░░▀ ▀░░▀ ▀▀▀▀ ▀▀▀ ▀░░▀ ▀▀▀   ▀▀▀   █▄▄█ ▀▀▀▀ ▀░░▀ ░░▀░░ ▀░░▀ ▀▀▀ ▀░░▀ ▀▀▀ ▀░▀▀ ▀▀▀
 
 # - EXIBE QUAIS CONTAINERS ESTÃO SENDO EXECUTADOS NO MOMENTO, UTILIZANDO A FLAG -A, TEMOS TAMBÉM TODOS OS CONTAINERS JÁ EXECUTADOS NA MÁQUINA
 docker ps OU docker container ls
@@ -83,9 +85,9 @@ docker logout
 docker push <IMAGE>
 
 
-                                             █░░▒█ █▀▀▀█ █░░░ █░▒█ █▀▄▀█ █▀▀▀ █▀▀▀█
-                                             ▒█▒█░ █░░▒█ █░░░ █░▒█ █▒█▒█ █▀▀▀ ▀▀▀▄▄
-                                             ░▀▄▀░ █▄▄▄█ █▄▄█ ▀▄▄▀ █░░▒█ █▄▄▄ █▄▄▄█
+█░░▒█ █▀▀▀█ █░░░ █░▒█ █▀▄▀█ █▀▀▀ █▀▀▀█
+▒█▒█░ █░░▒█ █░░░ █░▒█ █▒█▒█ █▀▀▀ ▀▀▀▄▄
+░▀▄▀░ █▄▄▄█ █▄▄█ ▀▄▄▀ █░░▒█ █▄▄▄ █▄▄▄█
 
 # - CRIA O CONTAINER E O DIRETORIO ONDE FICARA OS VOLUMES /DATA - ESSE É DO TIPO ANONIMOUS
 EX: DOCKER RUN -D -P 80:80 --NAME PHPMESSAGES_CONTAINER  -V /DATA PHPMESSAGES
@@ -134,7 +136,10 @@ DOCKER NETWORK CONNECT <REDE> <CONTAINER>
 # - INSPECIONAR CONTAINER
 DOCKER NETWORK INSPECT <NOME>
 
-# =======================DOCKER-COMPOSE==========================
+
+ █▀▀▄ █▀▀▀█ █▀▀█ █░▄▀ █▀▀▀ █▀▀█ ░░ █▀▀█ █▀▀▀█ █▀▄▀█ █▀▀█ █▀▀▀█ █▀▀▀█ █▀▀▀
+ █░▒█ █░░▒█ █░░░ █▀▄░ █▀▀▀ █▄▄▀ ▀▀ █░░░ █░░▒█ █▒█▒█ █▄▄█ █░░▒█ ▀▀▀▄▄ █▀▀▀
+ █▄▄▀ █▄▄▄█ █▄▄█ █░▒█ █▄▄▄ █░▒█ ░░ █▄▄█ █▄▄▄█ █░░▒█ █░░░ █▄▄▄█ █▄▄▄█ █▄▄▄
 # - DOCKER-COMPOSE UP
 
 # - COMPOSE EM BACKGROUND
@@ -146,7 +151,10 @@ DOCKER-COMPOSE DOWN
 # - VERIFICA O QUE TEM NO COMPOSE
 DOCKER-COMPOSE PS
 
-# =================KUBERNETES=================
+
+ █░▄▀ █░░█ █▀▀▄ █▀▀ █▀▀█ █▀▀▄ █▀▀ ▀▀█▀▀ █▀▀ █▀▀
+ █▀▄░ █░░█ █▀▀▄ █▀▀ █▄▄▀ █░░█ █▀▀ ░░█░░ █▀▀ ▀▀█
+ █░▒█ ░▀▀▀ ▀▀▀░ ▀▀▀ ▀░▀▀ ▀░░▀ ▀▀▀ ░░▀░░ ▀▀▀ ▀▀▀
 MINIKUBE START --DRIVER=<DRIVER>
 MINIKUBE STOP
 MINIKUBE DASHBOARD
