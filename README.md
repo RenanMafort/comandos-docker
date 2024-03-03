@@ -82,7 +82,11 @@ docker logout
 # - OBS: CRIAR A IMAGEM COM O NOME "USER/REPO" PARA FACILITAR O PUSH 
 docker push <IMAGE>
 
-# ==============VOLUMES=============
+
+                                             █░░▒█ █▀▀▀█ █░░░ █░▒█ █▀▄▀█ █▀▀▀ █▀▀▀█
+                                             ▒█▒█░ █░░▒█ █░░░ █░▒█ █▒█▒█ █▀▀▀ ▀▀▀▄▄
+                                             ░▀▄▀░ █▄▄▄█ █▄▄█ ▀▄▄▀ █░░▒█ █▄▄▄ █▄▄▄█
+
 # - CRIA O CONTAINER E O DIRETORIO ONDE FICARA OS VOLUMES /DATA - ESSE É DO TIPO ANONIMOUS
 EX: DOCKER RUN -D -P 80:80 --NAME PHPMESSAGES_CONTAINER  -V /DATA PHPMESSAGES
 
