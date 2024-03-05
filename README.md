@@ -101,7 +101,7 @@ docker volume ls
 # - VOLUME NOMEADO
 docker run -v <nome_volume>:/<DIRETORIO_DESTINO>
 
-# - CRIAR VOLUME BIND MOUNT
+# - CRIAR VOLUME BIND MOUNT - USADO PARA CRIAR O VOLUME NA NOSSA MÁQUINA
 docker run -v <NOME_VOLUME>:/<DIRETORIO_DESTINO>
 Ex: docker run -d -p 80:80 --name phpmessages_container -v nossodiretorio:<WORKDIR> <IMAGE>
 
