@@ -104,9 +104,11 @@ docker run -v <nome_volume>:/<DIRETORIO_DESTINO>
 # - CRIAR VOLUME BIND MOUNT - USADO PARA CRIAR O VOLUME NA NOSSA MÁQUINA
 docker run -v <NOME_VOLUME>:/<DIRETORIO_DESTINO>
 Ex: docker run -d -p 80:80 --name phpmessages_container -v nossodiretorio:<WORKDIR> <IMAGE>
+# - BIND MOUNT TAMBÉM SERVE PARA ATUALIZAR O PROJETO EM TEMPO REAL EM CASO DE COLOCARMOS O PATH PAI DO PROJETO NO PATH PAI DO CONTAINER
 
 # - CRIANDO VOLUME MANUALMENTE
-docker volume create <NONME_VOLUME>
+docker volume create <NOME_VOLUME>
+# - docker run -d -p 8080:80 --name phpmessages_container --rm -v <NOME_VOLUME_CREADO>:/var/www/html/ phpmessages
 
 # - INSPECIONA O VOLUME
 dcoker volume inspect <NAME_VOLUME>
@@ -118,7 +120,7 @@ docker volume rm <NOME_VOLUME>
 docker volume prune
 
 # - VOLUME APENAS DE LEITURA :RO SIGNIFICA READ ONLY
-docker run -v volume:/data:RD
+docker run -v volume:/data:RO
 
 # ==============NETWORKS=============
 # - LISTA TODAS AS REDES
