@@ -144,6 +144,22 @@ DOCKER NETWORK CONNECT <REDE> <CONTAINER>
 # - INSPECIONAR CONTAINER
 DOCKER NETWORK INSPECT <NOME>
 
+ █▄░▒█ █▀▀ ▀▀█▀▀ █░░░█ █▀▀█ █▀▀█ █░█ █▀▀
+ █▒█▒█ █▀▀ ░░█░░ █▄█▄█ █░░█ █▄▄▀ █▀▄ ▀▀█
+ █░░▀█ ▀▀▀ ░░▀░░ ░▀░▀░ ▀▀▀▀ ▀░▀▀ ▀░▀ ▀▀▀
+
+TIPOS DE CONEXÃO
+# - EXTERNA: conexão com uma API de um servidor remoto
+# - COM O HOST: comunicação com a máquina que está executando o Docker
+# - ENTRE CONTAINERS: comunicação que utiliza o driver bridge e permite a comunicação entre dois ou mais containers
+
+TIPOS DE REDES (DRIVERS)
+# - BRIDGE: o mais comum e default do Docker, utilizado quando containers precisam se conectar (na maioria das vezes optamos por este driver);
+# - HOST: permite a conexão entre um container a máquina que está hosteando o Docker;
+# - MACVLAN: permite a conexão a um container por um MAC address;
+# - NONE: remove todas conexões de rede de um container;
+# - PLUGINS: permite extensões de terceiros para criar outras redes
+
 
  █▀▀▄ █▀▀▀█ █▀▀█ █░▄▀ █▀▀▀ █▀▀█ ░░ █▀▀█ █▀▀▀█ █▀▄▀█ █▀▀█ █▀▀▀█ █▀▀▀█ █▀▀▀
  █░▒█ █░░▒█ █░░░ █▀▄░ █▀▀▀ █▄▄▀ ▀▀ █░░░ █░░▒█ █▒█▒█ █▄▄█ █░░▒█ ▀▀▀▄▄ █▀▀▀
