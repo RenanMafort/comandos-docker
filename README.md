@@ -84,7 +84,7 @@ docker logout
 # - OBS: CRIAR A IMAGEM COM O NOME "USER/REPO" PARA FACILITAR O PUSH 
 docker push <IMAGE>
 
-# - CASO QUERIA REMOVER TODOS DE UMA VEZ, 
+# - CASO QUERIA REMOVER TODOS DE UMA VEZ SE NÃO QUISER USAR O PRUNE, 
 docker rm -f $(docker ps -aq)
 docker rmi -f $(docker images -aq)
 docker network rm $(docker network ls -q)
