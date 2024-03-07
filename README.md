@@ -84,6 +84,13 @@ docker logout
 # - OBS: CRIAR A IMAGEM COM O NOME "USER/REPO" PARA FACILITAR O PUSH 
 docker push <IMAGE>
 
+# - CASO QUERIA REMOVER TODOS DE UMA VEZ, 
+docker rm -f $(docker ps -aq)
+docker rmi -f $(docker images -aq)
+docker network rm $(docker network ls -q)
+docker volume rm $(docker volume ls -q)
+
+
 
 █░░▒█ █▀▀▀█ █░░░ █░▒█ █▀▄▀█ █▀▀▀ █▀▀▀█
 ▒█▒█░ █░░▒█ █░░░ █░▒█ █▒█▒█ █▀▀▀ ▀▀▀▄▄
@@ -159,6 +166,18 @@ TIPOS DE REDES (DRIVERS)
 # - MACVLAN: permite a conexão a um container por um MAC address;
 # - NONE: remove todas conexões de rede de um container;
 # - PLUGINS: permite extensões de terceiros para criar outras redes
+
+# - USADO PARA LISTAR AS REDES
+docker network ls
+
+# - USADO PARA CRIAR UMA REDE
+docker network create <NOME_DA_REDE> # - POR PADRÃO
+
+# - REMOVENDO UMA REDE
+docker network rm <NOME_DA_REDE>
+
+
+
 
 
  █▀▀▄ █▀▀▀█ █▀▀█ █░▄▀ █▀▀▀ █▀▀█ ░░ █▀▀█ █▀▀▀█ █▀▄▀█ █▀▀█ █▀▀▀█ █▀▀▀█ █▀▀▀
