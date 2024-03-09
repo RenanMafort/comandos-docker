@@ -189,17 +189,17 @@ docker network rm <NOME_DA_REDE>
  █▀▀▄ █▀▀▀█ █▀▀█ █░▄▀ █▀▀▀ █▀▀█ ░░ █▀▀█ █▀▀▀█ █▀▄▀█ █▀▀█ █▀▀▀█ █▀▀▀█ █▀▀▀
  █░▒█ █░░▒█ █░░░ █▀▄░ █▀▀▀ █▄▄▀ ▀▀ █░░░ █░░▒█ █▒█▒█ █▄▄█ █░░▒█ ▀▀▀▄▄ █▀▀▀
  █▄▄▀ █▄▄▄█ █▄▄█ █░▒█ █▄▄▄ █░▒█ ░░ █▄▄█ █▄▄▄█ █░░▒█ █░░░ █▄▄▄█ █▄▄▄█ █▄▄▄
-# - DOCKER-COMPOSE UP
+# - EXECUTA O COMPOSE
+docker-compose up
 
 # - COMPOSE EM BACKGROUND
-DOCKER-COMPOSE UP -D
+docker-compose up -d
 
 # - PARANDO O COMPOSE
-DOCKER-COMPOSE DOWN
+docker-compose down
 
 # - VERIFICA O QUE TEM NO COMPOSE
-DOCKER-COMPOSE PS
-
+docker-compose up ps
 
  █░▄▀ █░░█ █▀▀▄ █▀▀ █▀▀█ █▀▀▄ █▀▀ ▀▀█▀▀ █▀▀ █▀▀
  █▀▄░ █░░█ █▀▀▄ █▀▀ █▄▄▀ █░░█ █▀▀ ░░█░░ █▀▀ ▀▀█
