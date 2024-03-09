@@ -173,11 +173,17 @@ docker network ls
 # - USADO PARA CRIAR UMA REDE
 docker network create <NOME_DA_REDE> # - POR PADRÃO
 
+# - USADO PARA CONECTAR UM CONTAINER EM UMA REDE
+docker network connect <NNAME_REDE> <NAME_CONTAINER>
+
+# - USADO PARA DESCONECTAR UM CONTAINER DE UMA REDE
+docker network disconnect <NNAME_REDE> <NAME_CONTAINER>
+
+# - INSPECIONA REDES
+docker network inspect <NOME_DA_REDE>
+
 # - REMOVENDO UMA REDE
 docker network rm <NOME_DA_REDE>
-
-
-
 
 
  █▀▀▄ █▀▀▀█ █▀▀█ █░▄▀ █▀▀▀ █▀▀█ ░░ █▀▀█ █▀▀▀█ █▀▄▀█ █▀▀█ █▀▀▀█ █▀▀▀█ █▀▀▀
