@@ -201,6 +201,18 @@ docker-compose down
 # - VERIFICA O QUE TEM NO COMPOSE
 docker-compose up ps
 
+
+DOCKER SWARM
+
+Conceitos fundamentais
+# - NODES: é uma instância (máquina) que participa do Swarm;
+# - MANAGER NODE: Node que gerencia os demais Nodes;
+# - WORKER NODE: Nodes que trabalham em função do Manager;
+# - SERVICE: Um conjunto de Tasks que o Manager Node manda o Work Node executar;
+# - TASK: comandos que são executados nos Nodes;
+
+
+
  █░▄▀ █░░█ █▀▀▄ █▀▀ █▀▀█ █▀▀▄ █▀▀ ▀▀█▀▀ █▀▀ █▀▀
  █▀▄░ █░░█ █▀▀▄ █▀▀ █▄▄▀ █░░█ █▀▀ ░░█░░ █▀▀ ▀▀█
  █░▒█ ░▀▀▀ ▀▀▀░ ▀▀▀ ▀░▀▀ ▀░░▀ ▀▀▀ ░░▀░░ ▀▀▀ ▀▀▀
